@@ -1,0 +1,21 @@
+
+DirectoryIndex index.html index.php
+
+Options -Indexes
+
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+
+# Remove index.php, if index or index.php, redirect to domain (no {REQUEST_URI} THEN
+# chain that to match the empty {REQUEST_URI} and redirect internally to index.php
+# Hopefully, that will prevent the server from rewriting to the DirectoryIndex
+RewriteRule ^index(\\.html)? http://www.gowed.ml/ [R=301,C]
+RewriteRule ^$ index.html [L]
+
+# Remove PHP extension from links (internally)
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
