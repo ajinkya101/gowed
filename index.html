@@ -45,6 +45,30 @@
 
     <link rel="stylesheet" href="css/style.css">
 	
+	<style type="text/css">
+		.carousel-item {
+		  height: 100vh;
+		  min-height: 400px;
+		  background: no-repeat center center scroll;
+		  -webkit-background-size: cover;
+		  -moz-background-size: cover;
+		  -o-background-size: cover;
+		  background-size: cover;
+		}
+		  /*---Firefox Bug Fix --*/
+		  .carousel-item {
+		  transition: -webkit-transform 0.5s ease;
+		  transition: transform 0.5s ease;
+		  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+		  -webkit-backface-visibility: visible;
+				  backface-visibility: visible;
+		}
+		.h2 {
+		  margin: 60px;
+		  text-align: justify;
+		}
+	</style>
+	
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -67,12 +91,8 @@
       <div class="site-mobile-menu-body"></div>
     </div>
     
-
     <header class="site-navbar py-3" role="banner">
       
-      
-
-
       <div class="container">
         <div class="row align-items-center">
           
@@ -124,19 +144,65 @@
       
     </header>
 
-    <div class="site-blocks-cover overlay inner-page-cover" style="background-image: url('images/Disha_Karan.jpg');" data-stellar-background-ratio="0.8">
-      <div class="container">
-        <div class="row align-items-center justify-content-center">
-          <div class="col-md-7 text-center" data-aos="fade-up">
-            <h1></h1>
-          </div>
+	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+		<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+		<li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+		<li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+		<li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+		<li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
+		<li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <!-- Slide One -->
+        <div class="carousel-item active" style="background-image: url('./images/slider/ss1.jpg')">
+        </div>
+        <!-- Slide Two -->
+        <div class="carousel-item" style="background-image: url('./images/slider/ss2.jpg')">
+        </div>
+        <!-- Slide Three -->
+        <div class="carousel-item" style="background-image: url('./images/slider/ss3.jpg')">
+        </div>
+		<!-- Slide Four -->
+        <div class="carousel-item" style="background-image: url('./images/slider/ss4.jpg')">
+        </div>
+		<!-- Slide Five -->
+        <div class="carousel-item" style="background-image: url('./images/slider/ss5.jpg')">
+        </div>
+        <!-- Slide Six -->
+        <div class="carousel-item" style="background-image: url('./images/slider/ss6.jpg')">
+        </div>
+        <!-- Slide Seven -->
+        <div class="carousel-item" style="background-image: url('./images/slider/ss7.jpg')">
+        </div>
+		<!-- Slide Eight -->
+        <div class="carousel-item" style="background-image: url('./images/slider/ss8.jpg')">
+        </div>
+		<!-- Slide Nine -->
+        <div class="carousel-item" style="background-image: url('./images/slider/ss9.jpg')">
+        </div>
+        <!-- Slide Ten -->
+        <div class="carousel-item" style="background-image: url('./images/slider/ss10.jpg')">
+        </div>
+        <!-- Slide Eleven -->
+        <div class="carousel-item" style="background-image: url('./images/slider/ss11.jpg')">
         </div>
       </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
 
-    <!---<div class="site-block-profile-pic" data-aos="fade" data-aos-delay="200">
-      <a href="about.html"><img src="#" alt="Image"></a>
-    </div>-->
 
     <div class="site-section" data-aos="fade">
       <div class="container">
@@ -146,16 +212,7 @@
             </div>
           </div>
         <div class="row">
-          <!---<div class="col-md-6">
-            
-            <div class="site-block-half d-lg-flex">
-              <div class="image" style="background-image: url('./images/potrait.JPG');"></div>
-              <div class="text">
-                <h3>Portrait Photography</h3>
-                <p>Sunt nesciunt repellat molestias vitae nostrum aliquid laudantium quo voluptatem provident voluptate tenetur illo.</p>
-              </div>
-            </div>
-          </div>-->
+
           <div class="col-md-6">
             <div class="site-block-half d-lg-flex">
              <div class="image" style="background-image: url('images/k_s1.jpg');"></div>
@@ -182,22 +239,22 @@
               <div class="block-testimony">
                 <img src="images/person_2.jpg" alt="Image" class="img-fluid">
                 <p>&ldquo;Creative photography and artist in true sense!! Has an eye for detailing. He surely coverts the imagination into a beautiful reality. All thanks to you and your team!! Many success to GoWed.&rdquo;</p>
-                <p class="small">&mdash; Shikha and Sumit</p>
+                <p class="small">&mdash; Shikha</p>
               </div>
               <div class="block-testimony">
                 <img src="images/person_03.jpg" alt="Image" class="img-fluid">
                 <p>&ldquo;He and his team always try to get the best shot of any situation, Thank you for being part of our Engagement. &rdquo;</p>
-                <p class="small">&mdash; Swapnali and Nitesh</p>
+                <p class="small">&mdash; Nitesh</p>
               </div>
 			  <div class="block-testimony">
                 <img src="images/person_4.jpg" alt="Image" class="img-fluid">
                 <p>&ldquo;Akash is the best photographer out there. He is a great person, both professionally and personally. He is very dedicated and passionate about his photography, We did our Daughters first birthday with him and we absolutely love the pictures. He would go to extremes to get that perfect shot as he it his in mind.&rdquo;</p>
-                <p class="small">&mdash; Dhatri Birthday</p>
+                <p class="small">&mdash; Vikram</p>
               </div>
 			  <div class="block-testimony">
                 <img src="images/person_5.jpg" alt="Image" class="img-fluid">
                 <p>&ldquo;If any one asks me to define "Candid Photography?" I would give the answer in one word "AKASH".  He is a such a passionate photographer i have ever met. He gives his 200% to get the right shot. Hats off to his patience to shoot with us. &rdquo;</p>
-                <p class="small">&mdash; Shrikant and Aarti</p>
+                <p class="small">&mdash; Aarti</p>
               </div>
             </div>
          </div>
@@ -205,87 +262,7 @@
      </div>
    </div>
 
-    <!-----<div class="site-section border-bottom">
-      <div class="container">
-        <div class="row text-center justify-content-center mb-5">
-          <div class="col-md-7" data-aos="fade-up">
-            <h2>My Photography</h2>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <a class="image-gradient" href="#">
-              <figure>
-                <img src="images/img_1.jpg" alt="" class="img-fluid">
-              </figure>
-              <div class="text">
-                <h3>Autumn Leaf</h3>
-                <span>5 photos / Nature</span>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <a class="image-gradient" href="#">
-              <figure>
-                <img src="images/img_2.jpg" alt="" class="img-fluid">
-              </figure>
-              <div class="text">
-                <h3>Sea Creatures</h3>
-                <span>5 photos / Nature</span>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-            <a class="image-gradient" href="#">
-              <figure>
-                <img src="images/img_3.jpg" alt="" class="img-fluid">
-              </figure>
-              <div class="text">
-                <h3>Enjoying Deep Sea</h3>
-                <span>5 photos / Nature</span>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
-            <a class="image-gradient" href="#">
-              <figure>
-                <img src="images/img_4.jpg" alt="" class="img-fluid">
-              </figure>
-              <div class="text">
-                <h3>Beautiful Beach</h3>
-                <span>5 photos / Nature</span>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
-            <a class="image-gradient" href="#">
-              <figure>
-                <img src="images/img_5.jpg" alt="" class="img-fluid">
-              </figure>
-              <div class="text">
-                <h3>Laughter is Science</h3>
-                <span>5 photos / Nature</span>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
-            <a class="image-gradient" href="./wedding.html">
-              <figure>
-                <img src="images/img_6.jpg" alt="" class="img-fluid">
-              </figure>
-              <div class="text">
-                <h3>Knot Tying</h3>
-                <span>5 photos / Nature</span>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>---->
-
-
-   <div class="py-3 mb-5 mt-5">
+	<div class="py-3 mb-5 mt-5">
      <div class="container">
        <div class="row">
          <div class="col-md-12 d-md-flex align-items-center">
@@ -297,9 +274,6 @@
        </div>
      </div>
    </div>
-
-
-  
 
   <footer class="site-footer">
       <div class="container">
