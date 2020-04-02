@@ -45,30 +45,8 @@
 
     <link rel="stylesheet" href="css/style.css">
 	
-	<style type="text/css">
-		.carousel-item {
-		  height: 100vh;
-		  min-height: 400px;
-		  background: no-repeat center center scroll;
-		  -webkit-background-size: cover;
-		  -moz-background-size: cover;
-		  -o-background-size: cover;
-		  background-size: cover;
-		}
-		  /*---Firefox Bug Fix --*/
-		  .carousel-item {
-		  transition: -webkit-transform 0.5s ease;
-		  transition: transform 0.5s ease;
-		  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-		  -webkit-backface-visibility: visible;
-				  backface-visibility: visible;
-		}
-		.h2 {
-		  margin: 60px;
-		  text-align: justify;
-		}
-	</style>
-	
+	<link rel="stylesheet" href="css/slider.css">
+
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -96,23 +74,23 @@
       <div class="container">
         <div class="row align-items-center">
           
-          <div class="col-6 col-xl-2">
+		  <div class="col-6 col-xl-2">
             <h1 class="mb-0"><a href="index.html" class="text-black h2 mb-0">GoWed<span class="text-primary">.</span></a></h1>
           </div>
           <div class="col-10 col-md-8 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
 
-              <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li class="active"><a href="./index">Home</a></li>
+            <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
+               <li class="active"><a href="./index">Home</a></li>
                 <li class="has-children">
                   <a href="#">Photography</a>
                   <ul class="dropdown">
-                    <li><a href="./wedding">Wedding</a></li>					
+                    <li><a href="./wedding">Wedding</a></li>
                     </li>
                   </ul>
                 <li><a href="./films">Films</a></li>
                 <li><a href="./about">About</a></li>
-				<li><a href="./faq">FAQ</a></li>
+				<li><a href="./faq">FAQ</a></li>					
               </ul>
             </nav>
           </div>
@@ -143,7 +121,7 @@
       </div>
       
     </header>
-
+	  
 	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -160,7 +138,7 @@
         <div class="carousel-item active" style="background-image: url('./images/slider/ss1.jpg')">
         </div>
         <!-- Slide Two -->
-        <div class="carousel-item" style="background-image: url('./images/slider/ss2.jpg')">
+        <div class="carousel-item " style="background-image: url('./images/slider/ss2.jpg')" >
         </div>
         <!-- Slide Three -->
         <div class="carousel-item" style="background-image: url('./images/slider/ss3.jpg')">
